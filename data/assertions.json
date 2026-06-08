@@ -1,0 +1,212 @@
+[
+    {
+        "assertion": "I feel anxious about climate change.",
+        "domain": "environment",
+        "basic_concept": "feeling",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "I feel proud of my local community.",
+        "domain": "community",
+        "basic_concept": "feeling",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "Crowded public transport makes me feel stressed.",
+        "domain": "transport",
+        "basic_concept": "feeling",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "Receiving feedback from teachers makes me feel motivated.",
+        "domain": "education",
+        "basic_concept": "feeling",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "My current neighbourhood is a good place to live.",
+        "domain": "neighbourhood",
+        "basic_concept": "evaluation",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "The university cafeteria food is bad.",
+        "domain": "university food",
+        "basic_concept": "evaluation",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "The online tax filing system is convenient.",
+        "domain": "e-government",
+        "basic_concept": "evaluation",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "Electric cars are better for urban air quality than petrol cars.",
+        "domain": "mobility",
+        "basic_concept": "evaluation",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "Cashless payments are safer than cash payments.",
+        "domain": "payments",
+        "basic_concept": "evaluation",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "Affordable housing is important to me.",
+        "domain": "housing",
+        "basic_concept": "importance",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "Reliable public transport is important for my daily life.",
+        "domain": "transport",
+        "basic_concept": "importance",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "Data privacy is important when I use mobile applications.",
+        "domain": "technology",
+        "basic_concept": "importance",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "Environmental protection is an important value for me.",
+        "domain": "values",
+        "basic_concept": "importance",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "Public transport in my city is reliable.",
+        "domain": "transport",
+        "basic_concept": "cognition",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "Online misinformation is a serious problem.",
+        "domain": "media",
+        "basic_concept": "cognition",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "Rent levels in my city are too high.",
+        "domain": "housing",
+        "basic_concept": "cognition",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "Housing costs in my city will increase next year.",
+        "domain": "housing",
+        "basic_concept": "cognition",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "I would complain to my landlord if essential repairs were delayed.",
+        "domain": "housing",
+        "basic_concept": "behavior",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "I would take the train rather than fly for a short domestic trip.",
+        "domain": "mobility",
+        "basic_concept": "behavior",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "I exercise several times a week.",
+        "domain": "health",
+        "basic_concept": "behavior",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "I sort my household waste before disposal.",
+        "domain": "environment",
+        "basic_concept": "behavior",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "Citizens should vote in national elections.",
+        "domain": "politics",
+        "basic_concept": "norm",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "People should sort household waste before disposal.",
+        "domain": "environment",
+        "basic_concept": "norm",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "Parents should limit children's screen time on school nights.",
+        "domain": "family",
+        "basic_concept": "norm",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "The government should increase funding for public libraries.",
+        "domain": "public policy",
+        "basic_concept": "norm",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "Tenants have the right to receive written notice before rent increases.",
+        "domain": "housing",
+        "basic_concept": "right",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "Employees have the right to disconnect from work emails outside working hours.",
+        "domain": "work",
+        "basic_concept": "right",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "Students should have the right to access mental health counselling at university.",
+        "domain": "education",
+        "basic_concept": "right",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "I have used recreational drugs in the past year.",
+        "domain": "health",
+        "basic_concept": "behavior",
+        "expected_polarity": "unipolar",
+        "sensitive": true
+    },
+    {
+        "assertion": "Immigrants should adapt to the local culture of their new country.",
+        "domain": "immigration",
+        "basic_concept": "norm",
+        "expected_polarity": "bipolar",
+        "sensitive": true
+    }
+]

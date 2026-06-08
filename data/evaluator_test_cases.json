@@ -1,0 +1,605 @@
+[
+    {
+        "criterion": "Question format",
+        "caro_ref": "Evaluation criteria: Question format (5/5)",
+        "target_check": "format_type_valid",
+        "auto_testable": true,
+        "gold": {
+            "assertion": "Public transport in my city is reliable.",
+            "expected_polarity": "bipolar"
+        },
+        "why": "format_type is not one of the four allowed request forms.",
+        "bad_item": {
+            "assertion": "Public transport in my city is reliable.",
+            "basic_concept": "cognition",
+            "question_text": "How reliable is public transport in your city?",
+            "format_type": "open_ended",
+            "scale_type": "bipolar",
+            "n_points": 5,
+            "labels": [
+                "Very unreliable",
+                "Unreliable",
+                "Neither reliable nor unreliable",
+                "Reliable",
+                "Very reliable"
+            ],
+            "polarity_reason": "Reliability runs from unreliable to reliable with a neutral midpoint."
+        },
+        "good_item": {
+            "assertion": "Public transport in my city is reliable.",
+            "basic_concept": "cognition",
+            "question_text": "How reliable is public transport in your city?",
+            "format_type": "direct_interrogative",
+            "scale_type": "bipolar",
+            "n_points": 5,
+            "labels": [
+                "Very unreliable",
+                "Unreliable",
+                "Neither reliable nor unreliable",
+                "Reliable",
+                "Very reliable"
+            ],
+            "polarity_reason": "Reliability runs from unreliable to reliable with a neutral midpoint."
+        }
+    },
+    {
+        "criterion": "Leading question",
+        "caro_ref": "Wording: Leading question",
+        "target_check": "no_leading_wording",
+        "auto_testable": true,
+        "gold": {
+            "assertion": "Public transport in my city is reliable.",
+            "expected_polarity": "bipolar"
+        },
+        "why": "\"Don't you agree...\" pushes the respondent toward a preferred answer.",
+        "bad_item": {
+            "assertion": "Public transport in my city is reliable.",
+            "basic_concept": "cognition",
+            "question_text": "Don't you agree that public transport in your city is reliable?",
+            "format_type": "direct_interrogative",
+            "scale_type": "bipolar",
+            "n_points": 5,
+            "labels": [
+                "Very unreliable",
+                "Unreliable",
+                "Neither reliable nor unreliable",
+                "Reliable",
+                "Very reliable"
+            ],
+            "polarity_reason": "Reliability runs from unreliable to reliable with a neutral midpoint."
+        },
+        "good_item": {
+            "assertion": "Public transport in my city is reliable.",
+            "basic_concept": "cognition",
+            "question_text": "How reliable is public transport in your city?",
+            "format_type": "direct_interrogative",
+            "scale_type": "bipolar",
+            "n_points": 5,
+            "labels": [
+                "Very unreliable",
+                "Unreliable",
+                "Neither reliable nor unreliable",
+                "Reliable",
+                "Very reliable"
+            ],
+            "polarity_reason": "Reliability runs from unreliable to reliable with a neutral midpoint."
+        }
+    },
+    {
+        "criterion": "Loaded question",
+        "caro_ref": "Wording: Loaded questions",
+        "target_check": "no_loaded_question",
+        "auto_testable": false,
+        "gold": {
+            "assertion": "Public transport in my city is reliable.",
+            "expected_polarity": "bipolar"
+        },
+        "why": "Presupposes that the transport is reliable and that it has a 'best' aspect; needs an LLM judge.",
+        "bad_item": {
+            "assertion": "Public transport in my city is reliable.",
+            "basic_concept": "cognition",
+            "question_text": "What is the best thing about your city's reliable public transport?",
+            "format_type": "direct_interrogative",
+            "scale_type": "bipolar",
+            "n_points": 5,
+            "labels": [
+                "Very unreliable",
+                "Unreliable",
+                "Neither reliable nor unreliable",
+                "Reliable",
+                "Very reliable"
+            ],
+            "polarity_reason": "Reliability runs from unreliable to reliable with a neutral midpoint."
+        },
+        "good_item": {
+            "assertion": "Public transport in my city is reliable.",
+            "basic_concept": "cognition",
+            "question_text": "How reliable is public transport in your city?",
+            "format_type": "direct_interrogative",
+            "scale_type": "bipolar",
+            "n_points": 5,
+            "labels": [
+                "Very unreliable",
+                "Unreliable",
+                "Neither reliable nor unreliable",
+                "Reliable",
+                "Very reliable"
+            ],
+            "polarity_reason": "Reliability runs from unreliable to reliable with a neutral midpoint."
+        }
+    },
+    {
+        "criterion": "Recall error",
+        "caro_ref": "Wording: Recall error",
+        "target_check": "no_recall_error",
+        "auto_testable": false,
+        "gold": {
+            "assertion": "I exercise several times a week.",
+            "expected_polarity": "unipolar"
+        },
+        "why": "Asks for a precise count over a long past window respondents cannot accurately recall; needs an LLM judge.",
+        "bad_item": {
+            "assertion": "I exercise several times a week.",
+            "basic_concept": "behavior",
+            "question_text": "Exactly how many minutes did you spend exercising in the past twelve months?",
+            "format_type": "direct_interrogative",
+            "scale_type": "unipolar",
+            "n_points": 5,
+            "labels": [
+                "0 minutes",
+                "1-2000 minutes",
+                "2001-4000 minutes",
+                "4001-6000 minutes",
+                "More than 6000 minutes"
+            ],
+            "polarity_reason": "Exercise volume runs from none to a maximum in one direction."
+        },
+        "good_item": {
+            "assertion": "I exercise several times a week.",
+            "basic_concept": "behavior",
+            "question_text": "In a typical week, how many days do you exercise?",
+            "format_type": "direct_interrogative",
+            "scale_type": "unipolar",
+            "n_points": 8,
+            "labels": [
+                "0 days",
+                "1 day",
+                "2 days",
+                "3 days",
+                "4 days",
+                "5 days",
+                "6 days",
+                "7 days"
+            ],
+            "polarity_reason": "Number of exercise days runs from none to every day in one direction."
+        }
+    },
+    {
+        "criterion": "Vague or ambiguous wording",
+        "caro_ref": "Wording: Vague or ambiguous wording",
+        "target_check": "no_vague_terms",
+        "auto_testable": true,
+        "gold": {
+            "assertion": "I sort my household waste before disposal.",
+            "expected_polarity": "unipolar"
+        },
+        "why": "Labels use vague frequency quantifiers (rarely/sometimes/often) instead of concept-specific anchors.",
+        "bad_item": {
+            "assertion": "I sort my household waste before disposal.",
+            "basic_concept": "behavior",
+            "question_text": "How often do you sort your household waste before disposal?",
+            "format_type": "direct_interrogative",
+            "scale_type": "unipolar",
+            "n_points": 5,
+            "labels": [
+                "Never",
+                "Rarely",
+                "Sometimes",
+                "Often",
+                "Always"
+            ],
+            "polarity_reason": "Frequency of sorting runs from never to always in one direction."
+        },
+        "good_item": {
+            "assertion": "I sort my household waste before disposal.",
+            "basic_concept": "behavior",
+            "question_text": "Out of every 10 times you dispose of household waste, how many times do you sort it first?",
+            "format_type": "direct_interrogative",
+            "scale_type": "unipolar",
+            "n_points": 6,
+            "labels": [
+                "0 times",
+                "2 times",
+                "4 times",
+                "6 times",
+                "8 times",
+                "10 times"
+            ],
+            "polarity_reason": "Proportion of sorted disposals runs from none to all in one direction."
+        }
+    },
+    {
+        "criterion": "Sensitive topic",
+        "caro_ref": "Wording: Sensitive topic",
+        "target_check": "no_sensitive_topic_handling",
+        "auto_testable": false,
+        "gold": {
+            "assertion": "I have used recreational drugs in the past year.",
+            "expected_polarity": "unipolar"
+        },
+        "why": "Direct accusatory phrasing of a sensitive behavior; should be normalised / indirect. Needs an LLM judge.",
+        "bad_item": {
+            "assertion": "I have used recreational drugs in the past year.",
+            "basic_concept": "behavior",
+            "question_text": "Have you illegally taken drugs this year?",
+            "format_type": "direct_interrogative",
+            "scale_type": "unipolar",
+            "n_points": 5,
+            "labels": [
+                "Never",
+                "Once",
+                "A few times",
+                "Many times",
+                "Very many times"
+            ],
+            "polarity_reason": "Drug-use frequency runs from never to very many times in one direction."
+        },
+        "good_item": {
+            "assertion": "I have used recreational drugs in the past year.",
+            "basic_concept": "behavior",
+            "question_text": "Many people use recreational drugs at some point. In the past year, how often have you used any recreational drug?",
+            "format_type": "direct_interrogative",
+            "scale_type": "unipolar",
+            "n_points": 5,
+            "labels": [
+                "Not at all",
+                "Once",
+                "2-3 times",
+                "4-10 times",
+                "More than 10 times"
+            ],
+            "polarity_reason": "Drug-use frequency runs from none to a maximum in one direction."
+        }
+    },
+    {
+        "criterion": "Assertion-question alignment",
+        "caro_ref": "Evaluation criteria: Assertion-question alignment (4/5)",
+        "target_check": "assertion_question_alignment",
+        "auto_testable": false,
+        "gold": {
+            "assertion": "Affordable housing is important to me.",
+            "expected_polarity": "unipolar"
+        },
+        "why": "The question measures satisfaction, not importance, so it does not represent the assertion. Needs an LLM judge.",
+        "bad_item": {
+            "assertion": "Affordable housing is important to me.",
+            "basic_concept": "importance",
+            "question_text": "How satisfied are you with the cost of your current housing?",
+            "format_type": "direct_interrogative",
+            "scale_type": "unipolar",
+            "n_points": 5,
+            "labels": [
+                "Not at all satisfied",
+                "Slightly satisfied",
+                "Moderately satisfied",
+                "Very satisfied",
+                "Completely satisfied"
+            ],
+            "polarity_reason": "Satisfaction runs from none to complete in one direction."
+        },
+        "good_item": {
+            "assertion": "Affordable housing is important to me.",
+            "basic_concept": "importance",
+            "question_text": "How important is affordable housing to you?",
+            "format_type": "direct_interrogative",
+            "scale_type": "unipolar",
+            "n_points": 5,
+            "labels": [
+                "Not at all important",
+                "Slightly important",
+                "Moderately important",
+                "Very important",
+                "Extremely important"
+            ],
+            "polarity_reason": "Importance runs from none to extreme in one direction."
+        }
+    },
+    {
+        "criterion": "Open/closed question",
+        "caro_ref": "Scale: Open/closed question",
+        "target_check": "is_closed_question",
+        "auto_testable": true,
+        "gold": {
+            "assertion": "My current neighbourhood is a good place to live.",
+            "expected_polarity": "bipolar"
+        },
+        "why": "Open-ended 'What is...' question that cannot be answered on the provided scale.",
+        "bad_item": {
+            "assertion": "My current neighbourhood is a good place to live.",
+            "basic_concept": "evaluation",
+            "question_text": "What is your opinion of your current neighbourhood as a place to live?",
+            "format_type": "direct_interrogative",
+            "scale_type": "bipolar",
+            "n_points": 5,
+            "labels": [
+                "Very bad",
+                "Bad",
+                "Neither good nor bad",
+                "Good",
+                "Very good"
+            ],
+            "polarity_reason": "Good/bad evaluation is bipolar with a neutral midpoint."
+        },
+        "good_item": {
+            "assertion": "My current neighbourhood is a good place to live.",
+            "basic_concept": "evaluation",
+            "question_text": "How good a place to live is your current neighbourhood?",
+            "format_type": "direct_interrogative",
+            "scale_type": "bipolar",
+            "n_points": 5,
+            "labels": [
+                "Very bad",
+                "Bad",
+                "Neither good nor bad",
+                "Good",
+                "Very good"
+            ],
+            "polarity_reason": "Good/bad evaluation is bipolar with a neutral midpoint."
+        }
+    },
+    {
+        "criterion": "Unbalanced response categories",
+        "caro_ref": "Scale: Unbalanced response categories",
+        "target_check": "balanced_categories",
+        "auto_testable": true,
+        "gold": {
+            "assertion": "My current neighbourhood is a good place to live.",
+            "expected_polarity": "bipolar"
+        },
+        "why": "Bipolar scale has three positive labels and only one negative label, favouring one side.",
+        "bad_item": {
+            "assertion": "My current neighbourhood is a good place to live.",
+            "basic_concept": "evaluation",
+            "question_text": "How good a place to live is your current neighbourhood?",
+            "format_type": "direct_interrogative",
+            "scale_type": "bipolar",
+            "n_points": 4,
+            "labels": [
+                "Bad",
+                "Good",
+                "Very good",
+                "Extremely good"
+            ],
+            "polarity_reason": "Good/bad evaluation is bipolar."
+        },
+        "good_item": {
+            "assertion": "My current neighbourhood is a good place to live.",
+            "basic_concept": "evaluation",
+            "question_text": "How good a place to live is your current neighbourhood?",
+            "format_type": "direct_interrogative",
+            "scale_type": "bipolar",
+            "n_points": 5,
+            "labels": [
+                "Very bad",
+                "Bad",
+                "Neither good nor bad",
+                "Good",
+                "Very good"
+            ],
+            "polarity_reason": "Good/bad evaluation is bipolar with a neutral midpoint."
+        }
+    },
+    {
+        "criterion": "Order labels",
+        "caro_ref": "Scale: Order labels",
+        "target_check": "labels_ordered_monotonically",
+        "auto_testable": true,
+        "gold": {
+            "assertion": "My current neighbourhood is a good place to live.",
+            "expected_polarity": "bipolar"
+        },
+        "why": "Labels are shuffled rather than running monotonically from one pole to the other.",
+        "bad_item": {
+            "assertion": "My current neighbourhood is a good place to live.",
+            "basic_concept": "evaluation",
+            "question_text": "How good a place to live is your current neighbourhood?",
+            "format_type": "direct_interrogative",
+            "scale_type": "bipolar",
+            "n_points": 5,
+            "labels": [
+                "Very good",
+                "Bad",
+                "Good",
+                "Neither good nor bad",
+                "Very bad"
+            ],
+            "polarity_reason": "Good/bad evaluation is bipolar with a neutral midpoint."
+        },
+        "good_item": {
+            "assertion": "My current neighbourhood is a good place to live.",
+            "basic_concept": "evaluation",
+            "question_text": "How good a place to live is your current neighbourhood?",
+            "format_type": "direct_interrogative",
+            "scale_type": "bipolar",
+            "n_points": 5,
+            "labels": [
+                "Very bad",
+                "Bad",
+                "Neither good nor bad",
+                "Good",
+                "Very good"
+            ],
+            "polarity_reason": "Good/bad evaluation is bipolar with a neutral midpoint."
+        }
+    },
+    {
+        "criterion": "Scale polarity",
+        "caro_ref": "Scale: Scale polarity",
+        "target_check": "polarity_matches_concept",
+        "auto_testable": true,
+        "gold": {
+            "assertion": "Affordable housing is important to me.",
+            "expected_polarity": "unipolar"
+        },
+        "why": "Importance is a unipolar concept but a bipolar scale was used.",
+        "bad_item": {
+            "assertion": "Affordable housing is important to me.",
+            "basic_concept": "importance",
+            "question_text": "How important is affordable housing to you?",
+            "format_type": "direct_interrogative",
+            "scale_type": "bipolar",
+            "n_points": 5,
+            "labels": [
+                "Very unimportant",
+                "Unimportant",
+                "Neither important nor unimportant",
+                "Important",
+                "Very important"
+            ],
+            "polarity_reason": "Treated importance as having a negative pole, which is wrong."
+        },
+        "good_item": {
+            "assertion": "Affordable housing is important to me.",
+            "basic_concept": "importance",
+            "question_text": "How important is affordable housing to you?",
+            "format_type": "direct_interrogative",
+            "scale_type": "unipolar",
+            "n_points": 5,
+            "labels": [
+                "Not at all important",
+                "Slightly important",
+                "Moderately important",
+                "Very important",
+                "Extremely important"
+            ],
+            "polarity_reason": "Importance runs from none to extreme in one direction."
+        }
+    },
+    {
+        "criterion": "Labels for numbers",
+        "caro_ref": "Scale: Labels for numbers",
+        "target_check": "all_labels_present",
+        "auto_testable": true,
+        "gold": {
+            "assertion": "Affordable housing is important to me.",
+            "expected_polarity": "unipolar"
+        },
+        "why": "Some scale points have empty labels instead of verbal anchors.",
+        "bad_item": {
+            "assertion": "Affordable housing is important to me.",
+            "basic_concept": "importance",
+            "question_text": "How important is affordable housing to you?",
+            "format_type": "direct_interrogative",
+            "scale_type": "unipolar",
+            "n_points": 5,
+            "labels": [
+                "Not at all important",
+                "",
+                "Moderately important",
+                "",
+                "Extremely important"
+            ],
+            "polarity_reason": "Importance runs from none to extreme in one direction."
+        },
+        "good_item": {
+            "assertion": "Affordable housing is important to me.",
+            "basic_concept": "importance",
+            "question_text": "How important is affordable housing to you?",
+            "format_type": "direct_interrogative",
+            "scale_type": "unipolar",
+            "n_points": 5,
+            "labels": [
+                "Not at all important",
+                "Slightly important",
+                "Moderately important",
+                "Very important",
+                "Extremely important"
+            ],
+            "polarity_reason": "Importance runs from none to extreme in one direction."
+        }
+    },
+    {
+        "criterion": "Number of points",
+        "caro_ref": "Scale: Number of points",
+        "target_check": "n_points_in_range",
+        "auto_testable": true,
+        "gold": {
+            "assertion": "My current neighbourhood is a good place to live.",
+            "expected_polarity": "bipolar"
+        },
+        "why": "Only 3 scale points; below the recommended 5-11 range.",
+        "bad_item": {
+            "assertion": "My current neighbourhood is a good place to live.",
+            "basic_concept": "evaluation",
+            "question_text": "How good a place to live is your current neighbourhood?",
+            "format_type": "direct_interrogative",
+            "scale_type": "bipolar",
+            "n_points": 3,
+            "labels": [
+                "Bad",
+                "Neither good nor bad",
+                "Good"
+            ],
+            "polarity_reason": "Good/bad evaluation is bipolar with a neutral midpoint."
+        },
+        "good_item": {
+            "assertion": "My current neighbourhood is a good place to live.",
+            "basic_concept": "evaluation",
+            "question_text": "How good a place to live is your current neighbourhood?",
+            "format_type": "direct_interrogative",
+            "scale_type": "bipolar",
+            "n_points": 5,
+            "labels": [
+                "Very bad",
+                "Bad",
+                "Neither good nor bad",
+                "Good",
+                "Very good"
+            ],
+            "polarity_reason": "Good/bad evaluation is bipolar with a neutral midpoint."
+        }
+    },
+    {
+        "criterion": "Agree-disagree",
+        "caro_ref": "Scale: Agree-disagree",
+        "target_check": "no_agree_disagree",
+        "auto_testable": true,
+        "gold": {
+            "assertion": "Citizens should vote in national elections.",
+            "expected_polarity": "bipolar"
+        },
+        "why": "Uses an agree-disagree scale, which Saris & Gallhofer recommend avoiding.",
+        "bad_item": {
+            "assertion": "Citizens should vote in national elections.",
+            "basic_concept": "norm",
+            "question_text": "To what extent do you agree that citizens should vote in national elections?",
+            "format_type": "direct_interrogative",
+            "scale_type": "bipolar",
+            "n_points": 5,
+            "labels": [
+                "Strongly disagree",
+                "Disagree",
+                "Neither agree nor disagree",
+                "Agree",
+                "Strongly agree"
+            ],
+            "polarity_reason": "Agreement was treated as bipolar."
+        },
+        "good_item": {
+            "assertion": "Citizens should vote in national elections.",
+            "basic_concept": "norm",
+            "question_text": "In your view, to what extent should citizens vote in national elections?",
+            "format_type": "direct_interrogative",
+            "scale_type": "bipolar",
+            "n_points": 5,
+            "labels": [
+                "Definitely should not",
+                "Probably should not",
+                "Neither",
+                "Probably should",
+                "Definitely should"
+            ],
+            "polarity_reason": "A norm runs from 'should not' to 'should' with a neutral midpoint."
+        }
+    }
+]
