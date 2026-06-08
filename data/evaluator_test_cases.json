@@ -1,7 +1,6 @@
 [
     {
         "criterion": "Question format",
-        "caro_ref": "Evaluation criteria: Question format (5/5)",
         "target_check": "format_type_valid",
         "auto_testable": true,
         "gold": {
@@ -44,7 +43,6 @@
     },
     {
         "criterion": "Leading question",
-        "caro_ref": "Wording: Leading question",
         "target_check": "no_leading_wording",
         "auto_testable": true,
         "gold": {
@@ -87,7 +85,6 @@
     },
     {
         "criterion": "Loaded question",
-        "caro_ref": "Wording: Loaded questions",
         "target_check": "no_loaded_question",
         "auto_testable": false,
         "gold": {
@@ -130,7 +127,6 @@
     },
     {
         "criterion": "Recall error",
-        "caro_ref": "Wording: Recall error",
         "target_check": "no_recall_error",
         "auto_testable": false,
         "gold": {
@@ -176,7 +172,6 @@
     },
     {
         "criterion": "Vague or ambiguous wording",
-        "caro_ref": "Wording: Vague or ambiguous wording",
         "target_check": "no_vague_terms",
         "auto_testable": true,
         "gold": {
@@ -220,7 +215,6 @@
     },
     {
         "criterion": "Sensitive topic",
-        "caro_ref": "Wording: Sensitive topic",
         "target_check": "no_sensitive_topic_handling",
         "auto_testable": false,
         "gold": {
@@ -263,7 +257,6 @@
     },
     {
         "criterion": "Assertion-question alignment",
-        "caro_ref": "Evaluation criteria: Assertion-question alignment (4/5)",
         "target_check": "assertion_question_alignment",
         "auto_testable": false,
         "gold": {
@@ -306,7 +299,6 @@
     },
     {
         "criterion": "Open/closed question",
-        "caro_ref": "Scale: Open/closed question",
         "target_check": "is_closed_question",
         "auto_testable": true,
         "gold": {
@@ -349,7 +341,6 @@
     },
     {
         "criterion": "Unbalanced response categories",
-        "caro_ref": "Scale: Unbalanced response categories",
         "target_check": "balanced_categories",
         "auto_testable": true,
         "gold": {
@@ -391,7 +382,6 @@
     },
     {
         "criterion": "Order labels",
-        "caro_ref": "Scale: Order labels",
         "target_check": "labels_ordered_monotonically",
         "auto_testable": true,
         "gold": {
@@ -434,7 +424,6 @@
     },
     {
         "criterion": "Scale polarity",
-        "caro_ref": "Scale: Scale polarity",
         "target_check": "polarity_matches_concept",
         "auto_testable": true,
         "gold": {
@@ -477,7 +466,6 @@
     },
     {
         "criterion": "Labels for numbers",
-        "caro_ref": "Scale: Labels for numbers",
         "target_check": "all_labels_present",
         "auto_testable": true,
         "gold": {
@@ -520,7 +508,6 @@
     },
     {
         "criterion": "Number of points",
-        "caro_ref": "Scale: Number of points",
         "target_check": "n_points_in_range",
         "auto_testable": true,
         "gold": {
@@ -561,7 +548,6 @@
     },
     {
         "criterion": "Agree-disagree",
-        "caro_ref": "Scale: Agree-disagree",
         "target_check": "no_agree_disagree",
         "auto_testable": true,
         "gold": {
