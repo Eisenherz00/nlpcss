@@ -178,5 +178,5 @@ if __name__ == "__main__":
 
     out_dir = Path("./outputs")
     out_dir.mkdir(exist_ok=True)
-    (out_dir / "items.json").write_text(json.dumps(results, indent=2, ensure_ascii=False))
-    print(f"Saved {len(results)} items to {out_dir / 'items.json'}")
+    (out_dir / "items_local.json").write_text(json.dumps(results, indent=2, ensure_ascii=False))
+    print(f"Saved {len(results)} items to {out_dir / 'items_local.json'}")
