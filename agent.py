@@ -9,7 +9,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 # MODEL_NAME = "Qwen/Qwen2.5-1.5B-Instruct"
 
 # LRZ deployment (uncomment when running on LRZ GPU cluster):
-MODEL_NAME = "/dss/dssmcmlfs01/pn25ju/pn25ju-dss-0000/models/Qwen2.5-7B-Instruct"
+MODEL_NAME = "/dss/dssmcmlfs01/pn25ju/pn25ju-dss-0000/models/Qwen3.5-9B"
 # ====================
 
 SYSTEM_PROMPT = """You are a survey methodology expert following Saris & Gallhofer (2014) conventions.
