@@ -1,6 +1,7 @@
 [
     {
         "criterion": "Question format",
+        "caro_ref": "Evaluation criteria: Question format (5/5)",
         "target_check": "format_type_valid",
         "auto_testable": true,
         "gold": {
@@ -43,6 +44,7 @@
     },
     {
         "criterion": "Leading question",
+        "caro_ref": "Wording: Leading question",
         "target_check": "no_leading_wording",
         "auto_testable": true,
         "gold": {
@@ -85,6 +87,7 @@
     },
     {
         "criterion": "Loaded question",
+        "caro_ref": "Wording: Loaded questions",
         "target_check": "no_loaded_question",
         "auto_testable": false,
         "gold": {
@@ -127,6 +130,7 @@
     },
     {
         "criterion": "Recall error",
+        "caro_ref": "Wording: Recall error",
         "target_check": "no_recall_error",
         "auto_testable": false,
         "gold": {
@@ -172,6 +176,7 @@
     },
     {
         "criterion": "Vague or ambiguous wording",
+        "caro_ref": "Wording: Vague or ambiguous wording",
         "target_check": "no_vague_terms",
         "auto_testable": true,
         "gold": {
@@ -215,6 +220,7 @@
     },
     {
         "criterion": "Sensitive topic",
+        "caro_ref": "Wording: Sensitive topic",
         "target_check": "no_sensitive_topic_handling",
         "auto_testable": false,
         "gold": {
@@ -257,6 +263,7 @@
     },
     {
         "criterion": "Assertion-question alignment",
+        "caro_ref": "Evaluation criteria: Assertion-question alignment (4/5)",
         "target_check": "assertion_question_alignment",
         "auto_testable": false,
         "gold": {
@@ -299,6 +306,7 @@
     },
     {
         "criterion": "Open/closed question",
+        "caro_ref": "Scale: Open/closed question",
         "target_check": "is_closed_question",
         "auto_testable": true,
         "gold": {
@@ -341,6 +349,7 @@
     },
     {
         "criterion": "Unbalanced response categories",
+        "caro_ref": "Scale: Unbalanced response categories",
         "target_check": "balanced_categories",
         "auto_testable": true,
         "gold": {
@@ -382,6 +391,7 @@
     },
     {
         "criterion": "Order labels",
+        "caro_ref": "Scale: Order labels",
         "target_check": "labels_ordered_monotonically",
         "auto_testable": true,
         "gold": {
@@ -424,6 +434,7 @@
     },
     {
         "criterion": "Scale polarity",
+        "caro_ref": "Scale: Scale polarity",
         "target_check": "polarity_matches_concept",
         "auto_testable": true,
         "gold": {
@@ -466,6 +477,7 @@
     },
     {
         "criterion": "Labels for numbers",
+        "caro_ref": "Scale: Labels for numbers",
         "target_check": "all_labels_present",
         "auto_testable": true,
         "gold": {
@@ -508,6 +520,7 @@
     },
     {
         "criterion": "Number of points",
+        "caro_ref": "Scale: Number of points",
         "target_check": "n_points_in_range",
         "auto_testable": true,
         "gold": {
@@ -548,6 +561,7 @@
     },
     {
         "criterion": "Agree-disagree",
+        "caro_ref": "Scale: Agree-disagree",
         "target_check": "no_agree_disagree",
         "auto_testable": true,
         "gold": {
@@ -586,6 +600,82 @@
                 "Definitely should"
             ],
             "polarity_reason": "A norm runs from 'should not' to 'should' with a neutral midpoint."
+        }
+    },
+    {
+        "criterion": "Nominal response format (objective concept)",
+        "caro_ref": "Scale: Scale polarity",
+        "target_check": "polarity_matches_concept",
+        "auto_testable": true,
+        "gold": {
+            "assertion": "I have completed a university degree.",
+            "expected_polarity": "nominal"
+        },
+        "why": "A demographic fact needs a nominal yes/no item, not a unipolar/bipolar rating scale.",
+        "bad_item": {
+            "assertion": "I have completed a university degree.",
+            "basic_concept": "demographics",
+            "question_text": "How much education have you completed?",
+            "format_type": "direct_interrogative",
+            "scale_type": "unipolar",
+            "n_points": 5,
+            "labels": [
+                "None",
+                "Some",
+                "A moderate amount",
+                "A lot",
+                "A great deal"
+            ],
+            "polarity_reason": "Wrongly treated a yes/no fact as a unipolar intensity scale."
+        },
+        "good_item": {
+            "assertion": "I have completed a university degree.",
+            "basic_concept": "demographics",
+            "question_text": "Have you completed a university degree?",
+            "format_type": "direct_interrogative",
+            "scale_type": "nominal",
+            "n_points": 2,
+            "labels": [
+                "No",
+                "Yes"
+            ],
+            "polarity_reason": "Holding a degree is an objective yes/no fact, so a nominal two-option item fits."
+        }
+    },
+    {
+        "criterion": "Number of points (nominal yes/no)",
+        "caro_ref": "Scale: Number of points",
+        "target_check": "n_points_in_range",
+        "auto_testable": true,
+        "gold": {
+            "assertion": "I have completed a university degree.",
+            "expected_polarity": "nominal"
+        },
+        "why": "A nominal item must offer at least two mutually exclusive options; a single option is not a valid closed item.",
+        "bad_item": {
+            "assertion": "I have completed a university degree.",
+            "basic_concept": "demographics",
+            "question_text": "Have you completed a university degree?",
+            "format_type": "direct_interrogative",
+            "scale_type": "nominal",
+            "n_points": 1,
+            "labels": [
+                "Yes"
+            ],
+            "polarity_reason": "Only one option is offered, so the respondent cannot actually choose."
+        },
+        "good_item": {
+            "assertion": "I have completed a university degree.",
+            "basic_concept": "demographics",
+            "question_text": "Have you completed a university degree?",
+            "format_type": "direct_interrogative",
+            "scale_type": "nominal",
+            "n_points": 2,
+            "labels": [
+                "No",
+                "Yes"
+            ],
+            "polarity_reason": "Holding a degree is an objective yes/no fact, so a nominal two-option item fits."
         }
     }
 ]

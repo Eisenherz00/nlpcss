@@ -99,6 +99,8 @@ def check_is_closed_question(item: dict) -> dict:
 
 
 def check_balanced_categories(item: dict, item_gold: Optional[dict] = None) -> dict:
+    if item.get("scale_type") == "nominal":
+        return _result(None, None, "Balance does not apply to nominal (unordered) items", "Scale: Unbalanced response categories", "not_applicable")
     labels = item.get("labels", [])
     scores = [classify_label(l) for l in labels]
     n_pos = sum(1 for s in scores if s > 0)
@@ -114,6 +116,8 @@ def check_balanced_categories(item: dict, item_gold: Optional[dict] = None) -> d
 
 
 def check_labels_ordered_monotonically(item: dict) -> dict:
+    if item.get("scale_type") == "nominal":
+        return _result(None, None, "Monotonic ordering does not apply to nominal (unordered) items", "Scale: Order labels", "not_applicable")
     scores = [classify_label(l) for l in item.get("labels", [])]
     non_decreasing = all(scores[i] <= scores[i + 1] for i in range(len(scores) - 1))
     non_increasing = all(scores[i] >= scores[i + 1] for i in range(len(scores) - 1))
@@ -141,8 +145,10 @@ def check_all_labels_present(item: dict) -> dict:
 
 def check_n_points_in_range(item: dict) -> dict:
     n = item.get("n_points")
-    passed = isinstance(n, int) and 5 <= n <= 11
-    detail = f"n_points={n} is within [5, 11]" if passed else f"n_points={n} is outside [5, 11]"
+    # Nominal items (yes/no, categories) may have as few as 2 options; rating scales need 5-11.
+    low = 2 if item.get("scale_type") == "nominal" else 5
+    passed = isinstance(n, int) and low <= n <= 11
+    detail = f"n_points={n} is within [{low}, 11]" if passed else f"n_points={n} is outside [{low}, 11]"
     return _result(passed, n, detail, "Scale: Number of points", "implemented")
 
 

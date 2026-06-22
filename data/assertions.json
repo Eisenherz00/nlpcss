@@ -208,5 +208,320 @@
         "basic_concept": "norm",
         "expected_polarity": "bipolar",
         "sensitive": true
+    },
+    {
+        "assertion": "Equality between all people is one of my core values.",
+        "domain": "society",
+        "basic_concept": "values",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "Loyalty to my family is a guiding value in my life.",
+        "domain": "family",
+        "basic_concept": "values",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "Religious faith is an important value in my life.",
+        "domain": "religion",
+        "basic_concept": "values",
+        "expected_polarity": "unipolar",
+        "sensitive": true
+    },
+    {
+        "assertion": "Spending a lot of time on social media increases feelings of loneliness.",
+        "domain": "technology",
+        "basic_concept": "causal_relationship",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "Regular physical exercise improves mental well-being.",
+        "domain": "health",
+        "basic_concept": "causal_relationship",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "Higher fuel prices reduce how much people use their cars.",
+        "domain": "mobility",
+        "basic_concept": "causal_relationship",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "My political views are similar to those of my close friends.",
+        "domain": "politics",
+        "basic_concept": "similarity_relationship",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "My spending habits are similar to those of my parents.",
+        "domain": "finance",
+        "basic_concept": "similarity_relationship",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "My taste in music is similar to my partner's.",
+        "domain": "lifestyle",
+        "basic_concept": "similarity_relationship",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "I prefer working from home rather than working in an office.",
+        "domain": "work",
+        "basic_concept": "preference",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "I prefer reading printed books rather than e-books.",
+        "domain": "lifestyle",
+        "basic_concept": "preference",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "I prefer using public transport rather than driving for my daily commute.",
+        "domain": "mobility",
+        "basic_concept": "preference",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "The government should introduce a nationwide four-day working week.",
+        "domain": "labour policy",
+        "basic_concept": "policies",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "The city should ban private cars from the city centre.",
+        "domain": "urban policy",
+        "basic_concept": "policies",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "The government should abolish university tuition fees.",
+        "domain": "education policy",
+        "basic_concept": "policies",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "I intend to reduce my meat consumption over the next year.",
+        "domain": "health",
+        "basic_concept": "action_tendencies",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "I plan to switch to a renewable energy provider.",
+        "domain": "environment",
+        "basic_concept": "action_tendencies",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "I intend to take part in the next local election.",
+        "domain": "politics",
+        "basic_concept": "action_tendencies",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "I expect to find a better job within the next two years.",
+        "domain": "work",
+        "basic_concept": "expectations_of_future_events",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "I expect to travel abroad within the next year.",
+        "domain": "travel",
+        "basic_concept": "expectations_of_future_events",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "I expect renewable energy to become my country's main power source within twenty years.",
+        "domain": "energy",
+        "basic_concept": "expectations_of_future_events",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "Artificial intelligence is beneficial for society.",
+        "domain": "technology",
+        "basic_concept": "evaluative_belief",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "Genetically modified food is harmful to health.",
+        "domain": "health",
+        "basic_concept": "evaluative_belief",
+        "expected_polarity": "bipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "Immigration is good for the national economy.",
+        "domain": "immigration",
+        "basic_concept": "evaluative_belief",
+        "expected_polarity": "bipolar",
+        "sensitive": true
+    },
+    {
+        "assertion": "I have moved to a different city in the past two years.",
+        "domain": "housing",
+        "basic_concept": "events",
+        "expected_polarity": "nominal",
+        "sensitive": false
+    },
+    {
+        "assertion": "I have changed my job in the last twelve months.",
+        "domain": "work",
+        "basic_concept": "events",
+        "expected_polarity": "nominal",
+        "sensitive": false
+    },
+    {
+        "assertion": "I have voted in a national election before.",
+        "domain": "politics",
+        "basic_concept": "events",
+        "expected_polarity": "nominal",
+        "sensitive": false
+    },
+    {
+        "assertion": "I am currently in full-time employment.",
+        "domain": "work",
+        "basic_concept": "demographics",
+        "expected_polarity": "nominal",
+        "sensitive": false
+    },
+    {
+        "assertion": "I live in a household with more than two people.",
+        "domain": "household",
+        "basic_concept": "demographics",
+        "expected_polarity": "nominal",
+        "sensitive": false
+    },
+    {
+        "assertion": "I have completed a university degree.",
+        "domain": "education",
+        "basic_concept": "demographics",
+        "expected_polarity": "nominal",
+        "sensitive": false
+    },
+    {
+        "assertion": "The European Union currently has 27 member states.",
+        "domain": "civics",
+        "basic_concept": "knowledge",
+        "expected_polarity": "nominal",
+        "sensitive": false
+    },
+    {
+        "assertion": "Carbon dioxide is a greenhouse gas.",
+        "domain": "science",
+        "basic_concept": "knowledge",
+        "expected_polarity": "nominal",
+        "sensitive": false
+    },
+    {
+        "assertion": "The German federal parliament is called the Bundestag.",
+        "domain": "civics",
+        "basic_concept": "knowledge",
+        "expected_polarity": "nominal",
+        "sensitive": false
+    },
+    {
+        "assertion": "I usually go to bed before midnight on workdays.",
+        "domain": "daily routine",
+        "basic_concept": "time",
+        "expected_polarity": "nominal",
+        "sensitive": false
+    },
+    {
+        "assertion": "My working day usually starts before 9 a.m.",
+        "domain": "work",
+        "basic_concept": "time",
+        "expected_polarity": "nominal",
+        "sensitive": false
+    },
+    {
+        "assertion": "I moved to my current city after 2015.",
+        "domain": "housing",
+        "basic_concept": "time",
+        "expected_polarity": "nominal",
+        "sensitive": false
+    },
+    {
+        "assertion": "I live within walking distance of a supermarket.",
+        "domain": "neighbourhood",
+        "basic_concept": "place",
+        "expected_polarity": "nominal",
+        "sensitive": false
+    },
+    {
+        "assertion": "I work in the city centre.",
+        "domain": "work",
+        "basic_concept": "place",
+        "expected_polarity": "nominal",
+        "sensitive": false
+    },
+    {
+        "assertion": "I grew up in a rural area.",
+        "domain": "background",
+        "basic_concept": "place",
+        "expected_polarity": "nominal",
+        "sensitive": false
+    },
+    {
+        "assertion": "I read more than ten books in a typical year.",
+        "domain": "leisure",
+        "basic_concept": "quantities",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "I spend more than fifty euros on groceries in a typical week.",
+        "domain": "finance",
+        "basic_concept": "quantities",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "I drink at least two litres of water per day.",
+        "domain": "health",
+        "basic_concept": "quantities",
+        "expected_polarity": "unipolar",
+        "sensitive": false
+    },
+    {
+        "assertion": "I follow the same routine every morning before work.",
+        "domain": "daily routine",
+        "basic_concept": "procedures",
+        "expected_polarity": "nominal",
+        "sensitive": false
+    },
+    {
+        "assertion": "I always compare prices online before making a large purchase.",
+        "domain": "consumer",
+        "basic_concept": "procedures",
+        "expected_polarity": "nominal",
+        "sensitive": false
+    },
+    {
+        "assertion": "I renew my official documents online rather than in person.",
+        "domain": "e-government",
+        "basic_concept": "procedures",
+        "expected_polarity": "nominal",
+        "sensitive": false
     }
 ]
