@@ -677,5 +677,44 @@
             ],
             "polarity_reason": "Holding a degree is an objective yes/no fact, so a nominal two-option item fits."
         }
+    },
+    {
+        "criterion": "Labels match number of points",
+        "caro_ref": "Scale: Labels match number of points",
+        "target_check": "labels_match_n_points",
+        "auto_testable": true,
+        "gold": {
+            "assertion": "I usually go to bed before midnight on workdays.",
+            "expected_polarity": "nominal"
+        },
+        "why": "n_points says 2 but four labels are provided, so the declared scale length and the labels disagree.",
+        "bad_item": {
+            "assertion": "I usually go to bed before midnight on workdays.",
+            "basic_concept": "event",
+            "question_text": "On workdays, do you typically go to bed before midnight?",
+            "format_type": "direct_interrogative",
+            "scale_type": "nominal",
+            "n_points": 2,
+            "labels": [
+                "No",
+                "Yes",
+                "Maybe",
+                "Unsure"
+            ],
+            "polarity_reason": "Going to bed before midnight is a yes/no fact."
+        },
+        "good_item": {
+            "assertion": "I usually go to bed before midnight on workdays.",
+            "basic_concept": "event",
+            "question_text": "On workdays, do you typically go to bed before midnight?",
+            "format_type": "direct_interrogative",
+            "scale_type": "nominal",
+            "n_points": 2,
+            "labels": [
+                "No",
+                "Yes"
+            ],
+            "polarity_reason": "Going to bed before midnight is a yes/no fact."
+        }
     }
 ]

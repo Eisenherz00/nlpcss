@@ -143,6 +143,19 @@ def check_all_labels_present(item: dict) -> dict:
     return _result(passed, len(labels), detail, "Scale: Labels for numbers", "implemented")
 
 
+def check_labels_match_n_points(item: dict) -> dict:
+    """The number of labels must equal n_points (a hard contract from the prompt)."""
+    labels = item.get("labels", [])
+    n = item.get("n_points")
+    passed = isinstance(n, int) and len(labels) == n
+    detail = (
+        f"labels length ({len(labels)}) matches n_points ({n})"
+        if passed
+        else f"labels length ({len(labels)}) does not match n_points ({n})"
+    )
+    return _result(passed, {"n_labels": len(labels), "n_points": n}, detail, "Scale: Labels match number of points", "implemented")
+
+
 def check_n_points_in_range(item: dict) -> dict:
     n = item.get("n_points")
     # Nominal items (yes/no, categories) may have as few as 2 options; rating scales need 5-11.
@@ -173,6 +186,7 @@ def evaluate_item(item: dict, item_gold: Optional[dict] = None) -> dict:
         "labels_ordered_monotonically": check_labels_ordered_monotonically(item),
         "polarity_matches_concept": check_polarity_matches_concept(item, item_gold),
         "all_labels_present": check_all_labels_present(item),
+        "labels_match_n_points": check_labels_match_n_points(item),
         "n_points_in_range": check_n_points_in_range(item),
         "no_agree_disagree": check_no_agree_disagree(item),
     }
