@@ -2,7 +2,7 @@
 # =====================================================================
 # run_on_lrz.sh — ONE command to run the agent on an LRZ GPU node.
 #
-# Run this FROM YOUR LAPTOP:   ./run_on_lrz.sh
+# Run this FROM YOUR LAPTOP:   bash scripts/run_on_lrz.sh
 # It does everything end-to-end:
 #   1. sync the code to LRZ
 #   2. submit a SLURM GPU job that runs agent.py on a compute node
@@ -13,12 +13,12 @@
 # This file exists purely for the LRZ deployment.
 # =====================================================================
 
-LOCAL_DIR="/Users/m245172/Desktop/uni/Seminar/nlpcss/"
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)/"
 
 # 1. Sync code to LRZ -------------------------------------------------
 echo "[1/4] Syncing local files to LRZ..."
 rsync -avz --exclude '.venv' --exclude '__pycache__' --exclude '.DS_Store' --exclude 'outputs' \
-  "$LOCAL_DIR" lrz:~/seminar/ > /dev/null
+  "$PROJECT_ROOT" lrz:~/seminar/ > /dev/null
 
 # 2. Submit the GPU job ----------------------------------------------
 # The SLURM batch script is fed to `sbatch` on stdin via the heredoc below,
@@ -26,7 +26,7 @@ rsync -avz --exclude '.venv' --exclude '__pycache__' --exclude '.DS_Store' --exc
 # "#SBATCH" are SLURM directives (resource requests), NOT comments.
 # 'EOF' is quoted, so $VARS and $(...) inside are evaluated on the COMPUTE
 # NODE at run time, not on your laptop now.
-echo "[2/4] Submitting GPU job..."
+# echo "[2/4] Submitting GPU job..."
 JOB_ID=$(ssh lrz "sbatch --qos=mcml --parsable" <<'EOF'
 #!/bin/bash
 #SBATCH --job-name=survey-agent
@@ -64,8 +64,8 @@ echo "Running on node: $(hostname)"
 echo "Model: $MODEL_NAME"
 nvidia-smi
 
-python agent.py --label lrz
-echo "agent.py finished. Results are in ~/seminar/outputs/items_lrz.json"
+python agent.py
+echo "agent.py finished. Results are in ~/seminar/outputs/items.json"
 EOF
 )
 echo "Job submitted, Job ID: $JOB_ID"
@@ -79,7 +79,7 @@ echo "Job finished!"
 
 # 4. Sync results back to local --------------------------------------
 echo "[4/4] Downloading results to local machine..."
-mkdir -p "${LOCAL_DIR}outputs"
-rsync -avz lrz:~/seminar/outputs/ "${LOCAL_DIR}outputs/" > /dev/null
+mkdir -p "${PROJECT_ROOT}outputs"
+rsync -avz lrz:~/seminar/outputs/ "${PROJECT_ROOT}outputs/" > /dev/null
 
 echo "All done! Check the local outputs/ directory for results (items.json)."

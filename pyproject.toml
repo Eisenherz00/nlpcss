@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "nlpcss"
+version = "0.1.0"
+description = "Assertion → Survey Item Agent with rule-based evaluator"
+packages = [{ include = "src" }]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+torch = "*"
+transformers = "*"
+accelerate = "*"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

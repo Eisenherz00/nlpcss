@@ -33,12 +33,12 @@ data/assertions.json ──▶ agent.py ──▶ outputs/items.json ──▶ e
 ### Local (laptop, for development/testing — LRZ is slow to iterate on)
 
 ```bash
-pip install -r requirements.txt
+poetry install                     # create venv + install all dependencies
 
-python agent.py --limit 5      # quick smoke test on the first 5 assertions
-python agent.py                # full run with the small local model
-python evaluator.py            # score outputs/items.json
-python test_evaluator.py       # check the evaluator rubric itself
+poetry run python agent.py --limit 5         # quick smoke test
+poetry run python agent.py                   # full run with the small local model
+poetry run python evaluator.py               # score outputs/items.json
+poetry run python tests/test_evaluator.py    # check the evaluator rubric itself
 ```
 
 `agent.py` defaults to a small model (`Qwen2.5-1.5B-Instruct`, auto-downloaded)
@@ -48,12 +48,12 @@ local default.
 ### LRZ (GPU node — the actual deliverable)
 
 ```bash
-./run_on_lrz.sh   # rsync code -> sbatch job -> poll -> rsync results back
+bash scripts/run_on_lrz.sh   # rsync code -> sbatch job -> poll -> rsync results back
 ```
 
-`run_on_lrz.sh` orchestrates from your laptop; `run_agent.sh` is the SLURM batch
-script that runs on the GPU node. The large model is read from a **local dss
-path** (set via `MODEL_NAME` in `run_agent.sh`), so nothing is downloaded on the
+`scripts/run_on_lrz.sh` orchestrates from your laptop; it submits an inline SLURM batch
+job to run on the GPU node. The large model is read from a **local dss
+path** (set via `MODEL_NAME` in the script), so nothing is downloaded on the
 compute node.
 
 ---
@@ -139,18 +139,30 @@ Deferred to an LLM judge (semantic judgement required): `no_loaded_question`,
 ## Repository layout
 
 ```
-agent.py                          # Stage 1: assertion -> closed survey item
-evaluator.py                      # Stage 2: rule-based scoring of items
-test_evaluator.py                 # Unit test for the evaluator rubric
-run_on_lrz.sh                     # Local: sync -> submit -> poll -> sync back
-run_agent.sh                      # SLURM batch script (runs on the GPU node)
-requirements.txt
-data/
-  assertions.json                 # Set A: generation inputs + gold labels
-  evaluator_test_cases.json       # Set B: bad/good pairs per evaluation criterion
-  protocol.md                     # Meeting protocol + Caro's evaluation rubric
-Questionnaire Design_LMU_1 2.pdf  # Course slides (primary knowledge source)
-outputs/                          # Generated items + eval reports (gitignored)
+nlpcss/
+├── src/                                 # Library code (importable as `src.agent`, `src.evaluator`)
+│   ├── agent/
+│   │   ├── prompts.py                   #   SYSTEM_PROMPT + LOCAL_MODEL constants
+│   │   ├── model.py                     #   load_model() — HF Hub / local path
+│   │   ├── generation.py                #   _extract_json(), _run(), generate_item()
+│   │   └── pipeline.py                  #   run_all() batch processing
+│   └── evaluator/
+│       ├── lexicon.py                   #   Sentiment word lists + classify_label()
+│       ├── checks.py                    #   15 check_xxx() functions
+│       ├── scoring.py                   #   evaluate_item(), evaluate_batch()
+│       └── report.py                    #   Terminal report printing
+├── tests/
+│   └── test_evaluator.py               # Unit test for the evaluator rubric
+├── data/
+│   ├── assertions.json                  # Set A: generation inputs + gold labels
+│   └── evaluator_test_cases.json        # Set B: bad/good pairs per evaluation criterion
+├── agent.py                             # Thin CLI entry point → src.agent
+├── evaluator.py                         # Thin CLI entry point → src.evaluator
+├── scripts/
+│   └── run_on_lrz.sh                    # Local: sync → submit → poll → sync back
+├── pyproject.toml                       # Python packaging (pip install -e .)
+├── requirements.txt
+└── outputs/                             # Generated items + eval reports (gitignored)
 ```
 
 ## Data

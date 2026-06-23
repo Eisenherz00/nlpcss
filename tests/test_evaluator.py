@@ -1,4 +1,4 @@
-"""Validate that evaluator.py catches one bad example for every Caro evaluation criterion.
+"""Validate that the evaluator catches one bad example for every Caro evaluation criterion.
 
 Reads data/evaluator_test_cases.json (Set B). For each criterion it runs the crafted
 `bad_item` and `good_item` through the evaluator and checks that:
@@ -13,7 +13,7 @@ separate from running the agent over data/assertions.json.
 import json
 from pathlib import Path
 
-from evaluator import evaluate_item
+from src.evaluator.scoring import evaluate_item
 
 CASES_PATH = Path("./data/evaluator_test_cases.json")
 
