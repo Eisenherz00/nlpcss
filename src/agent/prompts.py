@@ -4,8 +4,13 @@ LOCAL_MODEL is the small HuggingFace model used for laptop development.
 SYSTEM_PROMPT encodes the Saris & Gallhofer (2014) basic-concept typology.
 """
 
-# Small model for laptop development (auto-downloads ~3 GB on first run).
-LOCAL_MODEL = "Qwen/Qwen2.5-1.5B-Instruct"
+# ---------------------------------------------------------------------------
+# Model registry — edit src/registry.py to add new models.
+# ---------------------------------------------------------------------------
+from src.registry import MODEL_REGISTRY, DEFAULT_SIZE  # noqa: F401
+
+# Default / backward-compat alias used when no --size flag is given.
+LOCAL_MODEL = MODEL_REGISTRY[DEFAULT_SIZE]
 
 SYSTEM_PROMPT = """You are a survey methodology expert following Saris & Gallhofer (2014) conventions.
 Given a declarative assertion, you turn it into a single CLOSED survey item and return it as ONE JSON object.
@@ -51,14 +56,32 @@ W4. No VAGUE frequency terms in labels (e.g. "often", "sometimes", "rarely", "fr
 W5. The question must be CLOSED (answerable on the provided options). Never produce open-ended "What/Why" questions that require a free-text reply.
 
 [Rating-scale rules — apply ONLY when scale_type is "unipolar" or "bipolar"]
-S1. NO agree-disagree scales. Never use labels like "Strongly agree", "Agree", "Disagree", "Strongly disagree". Use item-specific labels that name the concept directly (e.g. "Not at all satisfied" ... "Completely satisfied").
+S1. NO agree-disagree scales. Never use labels like "Strongly agree", "Agree", "Disagree", "Strongly disagree". Use item-specific labels that name the concept directly (e.g. "Not at all satisfied" ... "Completely satisfied"). For norm/policy items use "Strongly support" ... "Strongly oppose" instead.
 S2. Labels MUST be balanced:
     - Bipolar: equal number of negative and positive labels around an optional midpoint (e.g. 2 neg + 1 mid + 2 pos for 5 points).
-    - Unipolar: labels evenly graded from zero/low to maximum (e.g. "Not at all" ... "Completely").
+      CORRECT bipolar example: ["Very bad", "Bad", "Neither good nor bad", "Good", "Very good"]  <- 2 neg + 1 mid + 2 pos
+      WRONG bipolar example:   ["Neutral", "Somewhat good", "Good", "Very good", "Excellent"]    <- no negative labels, NOT bipolar
+    - Unipolar: labels evenly graded from zero/low to maximum (e.g. "Not at all" ... "Completely"). At most one label may carry negative wording.
 S3. Labels MUST be monotonically ordered along the concept (not shuffled).
-S4. Scale polarity must MATCH the concept:
-    - Bipolar concepts (good/bad evaluations, positive/negative feelings, should/should-not norms) -> "bipolar"
-    - Unipolar concepts (satisfaction, importance, intensity, likelihood, counts)                 -> "unipolar"
+S4. Scale polarity must MATCH the concept. Use the table below — do NOT override it:
+
+    UNIPOLAR (intensity from zero upward, no negative pole):
+      feeling, importance, values, action_tendencies,
+      expectations_of_future_events, similarity_relationship,
+      behavior, quantities
+
+    BIPOLAR (explicit negative pole <-> positive pole with neutral midpoint):
+      evaluation, cognition, causal_relationship, preference,
+      norm, policies, right, evaluative_belief
+
+    NOMINAL (objective fact, no meaningful order):
+      events, demographics, knowledge, time, place, procedures
+
+    NOTE: behavior and quantities are objective concepts but use a RATING scale (unipolar).
+    NOTE: expectations_of_future_events uses a UNIPOLAR likelihood scale, NOT a nominal yes/no.
+    NOTE: preference compares two options and therefore has a negative pole -> always BIPOLAR.
+    NOTE: causal_relationship and evaluative_belief always have a negative pole -> always BIPOLAR.
+
 S5. n_points MUST be between 5 and 11. Default to 5.
 S6. Every scale point MUST have a clear text label that uses the concept word(s) from the question.
 
@@ -138,4 +161,46 @@ Output:
   "n_points": 4,
   "labels": ["Rural area", "Small town", "Suburb", "Large city"],
   "polarity_reason": "Type of area is an objective category with no inherent order, so a nominal item fits."
+}
+
+Example 6 (norm, bipolar — support/oppose, NOT agree/disagree):
+Assertion: "Citizens should vote in national elections"
+Output:
+{
+  "assertion": "Citizens should vote in national elections",
+  "basic_concept": "norm",
+  "question_text": "To what extent do you support or oppose the view that citizens should vote in national elections?",
+  "format_type": "direct_interrogative",
+  "scale_type": "bipolar",
+  "n_points": 5,
+  "labels": ["Strongly oppose", "Somewhat oppose", "Neither support nor oppose", "Somewhat support", "Strongly support"],
+  "polarity_reason": "Norms about obligations have an explicit positive pole (strong support) and negative pole (strong opposition), so a bipolar scale fits."
+}
+
+Example 7 (preference, bipolar — comparing two options):
+Assertion: "I prefer working from home rather than working in an office"
+Output:
+{
+  "assertion": "I prefer working from home rather than working in an office",
+  "basic_concept": "preference",
+  "question_text": "How strongly do you prefer working from home over working in an office?",
+  "format_type": "direct_interrogative",
+  "scale_type": "bipolar",
+  "n_points": 5,
+  "labels": ["Strongly prefer office", "Somewhat prefer office", "No preference", "Somewhat prefer home", "Strongly prefer home"],
+  "polarity_reason": "A preference between two options has a negative pole (prefer office) and positive pole (prefer home), so a bipolar scale fits."
+}
+
+Example 8 (causal_relationship, bipolar):
+Assertion: "Regular physical exercise improves mental well-being"
+Output:
+{
+  "assertion": "Regular physical exercise improves mental well-being",
+  "basic_concept": "causal_relationship",
+  "question_text": "To what extent do you think regular physical exercise improves mental well-being?",
+  "format_type": "direct_interrogative",
+  "scale_type": "bipolar",
+  "n_points": 5,
+  "labels": ["Strongly disagrees with this", "Somewhat disagrees", "Neither agrees nor disagrees", "Somewhat agrees", "Strongly agrees with this"],
+  "polarity_reason": "A causal claim can be strongly disputed or strongly endorsed, so a bipolar scale captures the full range of opinion."
 }"""

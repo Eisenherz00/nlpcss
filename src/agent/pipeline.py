@@ -7,8 +7,14 @@ from src.agent.model import load_model
 from src.agent.generation import generate_item
 
 
-def run_all(model_name: str, assertions_path: str, out_dir: str, limit: int | None = None):
-    """Load the model, generate an item per assertion, write outputs/items.json."""
+def run_all(
+    model_name: str,
+    assertions_path: str,
+    out_dir: str,
+    stem: str = "small",
+    limit: int | None = None,
+):
+    """Load the model, generate an item per assertion, write outputs/items_{stem}.json."""
     tokenizer, model = load_model(model_name)
 
     gold = json.loads(Path(assertions_path).read_text())
@@ -25,6 +31,7 @@ def run_all(model_name: str, assertions_path: str, out_dir: str, limit: int | No
 
     out = Path(out_dir)
     out.mkdir(exist_ok=True)
-    (out / "items.json").write_text(json.dumps(results, indent=2, ensure_ascii=False))
-    print(f"Saved {len(results)} items to {out / 'items.json'}")
+    out_file = out / f"items_{stem}.json"
+    out_file.write_text(json.dumps(results, indent=2, ensure_ascii=False))
+    print(f"Saved {len(results)} items to {out_file}")
     return results
