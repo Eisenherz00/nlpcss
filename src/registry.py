@@ -5,9 +5,9 @@ triggering the transformers-dependent model loader in src.agent.model.
 """
 
 MODEL_REGISTRY: dict[str, str] = {
-    "small":  "Qwen/Qwen2.5-1.5B-Instruct",
-    "big":    "Qwen/Qwen2.5-7B-Instruct",
-    "large":  "Qwen/Qwen2.5-14B-Instruct",
+    "small":  "mlx-community/Qwen2.5-1.5B-Instruct-4bit",
+    "big":    "mlx-community/Qwen2.5-7B-Instruct-4bit",
+    "large":  "mlx-community/Qwen2.5-32B-Instruct-4bit",
 }
 
 # Default / backward-compat alias.

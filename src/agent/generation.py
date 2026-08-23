@@ -6,8 +6,10 @@ and parse its output into a Python dict.
 
 import json
 import re
+import sys
 
 from src.agent.prompts import SYSTEM_PROMPT
+
 
 
 def _extract_json(text: str) -> dict:
@@ -16,7 +18,7 @@ def _extract_json(text: str) -> dict:
     if fenced:
         candidate = fenced.group(1)
     else:
-        brace = re.search(r"\{.*\}", text, re.DOTALL)
+        brace = re.search(r"\{.*?\}", text, re.DOTALL)
         candidate = brace.group(0) if brace else text
     return json.loads(candidate)
 
@@ -30,13 +32,31 @@ def _run(assertion: str, tokenizer, model, suffix: str = "") -> str:
         {"role": "system", "content": SYSTEM_PROMPT},
         {"role": "user", "content": user_message},
     ]
-    text = tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    inputs = tokenizer(text, return_tensors="pt").to(model.device)
-    outputs = model.generate(
-        **inputs, max_new_tokens=512, do_sample=True, temperature=0.7, top_p=0.9
-    )
-    input_length = inputs["input_ids"].shape[1]
-    return tokenizer.decode(outputs[0][input_length:], skip_special_tokens=True)
+
+    # macOS (MLX 架构)
+    if sys.platform == "darwin":
+        from mlx_lm import generate
+        from mlx_lm.sample_utils import make_sampler
+
+        tok = getattr(tokenizer, "_tokenizer", tokenizer)
+        if hasattr(tok, "apply_chat_template"):
+            prompt_str = tok.apply_chat_template(
+                messages, tokenize=False, add_generation_prompt=True
+            )
+        else:
+            prompt_str = tokenizer.apply_chat_template(
+                messages, tokenize=False, add_generation_prompt=True
+            )
+
+        sampler = make_sampler(temp=0.7, top_p=0.9)
+        return generate(
+            model,
+            tokenizer,
+            prompt=prompt_str,
+            max_tokens=512,
+            sampler=sampler,
+            verbose=False,
+        )
 
 
 def generate_item(assertion: str, tokenizer, model) -> dict:
@@ -45,5 +65,10 @@ def generate_item(assertion: str, tokenizer, model) -> dict:
     try:
         return _extract_json(answer)
     except (json.JSONDecodeError, ValueError):
-        answer = _run(assertion, tokenizer, model, suffix="Output JSON only, no markdown.")
+        answer = _run(
+            assertion,
+            tokenizer,
+            model,
+            suffix="Output JSON only, no markdown.",
+        )
         return _extract_json(answer)

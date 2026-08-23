@@ -9,6 +9,7 @@ python = "^3.10"
 torch = "*"
 transformers = "*"
 accelerate = "*"
+mlx-lm = "^0.31.3"
 
 [build-system]
 requires = ["poetry-core"]
