@@ -1,0 +1,1155 @@
+[
+  {
+    "assertion": "I feel anxious about climate change.",
+    "basic_concept": "feeling",
+    "question_text": "How anxious do you feel about climate change?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Not at all anxious",
+      "Slightly anxious",
+      "Moderately anxious",
+      "Very anxious",
+      "Extremely anxious"
+    ],
+    "polarity_reason": "Anxiety is a feeling that can range from none to extreme, fitting a unipolar scale."
+  },
+  {
+    "assertion": "I feel proud of my local community.",
+    "basic_concept": "feeling",
+    "question_text": "How proud do you feel of your local community?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Not at all proud",
+      "Slightly proud",
+      "Moderately proud",
+      "Very proud",
+      "Completely proud"
+    ],
+    "polarity_reason": "Pride is a feeling that ranges from none to extreme along one direction, so a unipolar scale fits."
+  },
+  {
+    "assertion": "Crowded public transport makes me feel stressed.",
+    "basic_concept": "feeling",
+    "question_text": "How stressed does crowded public transport make you feel?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Not at all stressed",
+      "Slightly stressed",
+      "Moderately stressed",
+      "Very stressed",
+      "Extremely stressed"
+    ],
+    "polarity_reason": "Stress ranges from none to extreme along one direction, so a unipolar scale fits."
+  },
+  {
+    "assertion": "Receiving feedback from teachers makes me feel motivated.",
+    "basic_concept": "feeling",
+    "question_text": "How motivated do you feel when receiving feedback from teachers?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Not at all motivated",
+      "Slightly motivated",
+      "Moderately motivated",
+      "Very motivated",
+      "Completely motivated"
+    ],
+    "polarity_reason": "Motivation has a clear zero point and increases in one direction, so a unipolar scale fits."
+  },
+  {
+    "assertion": "My current neighbourhood is a good place to live.",
+    "basic_concept": "evaluation",
+    "question_text": "How would you evaluate your current neighbourhood as a place to live?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Very bad",
+      "Bad",
+      "Neither good nor bad",
+      "Good",
+      "Very good"
+    ],
+    "polarity_reason": "Good/bad evaluations are inherently bipolar with a clear neutral midpoint."
+  },
+  {
+    "assertion": "The university cafeteria food is bad.",
+    "basic_concept": "evaluation",
+    "question_text": "How would you rate the quality of the university cafeteria food?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Very bad",
+      "Bad",
+      "Neither good nor bad",
+      "Good",
+      "Very good"
+    ],
+    "polarity_reason": "Evaluations of food quality are inherently bipolar with a clear neutral midpoint."
+  },
+  {
+    "assertion": "The online tax filing system is convenient.",
+    "basic_concept": "evaluation",
+    "question_text": "How convenient do you find the online tax filing system?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Not at all convenient",
+      "Slightly convenient",
+      "Moderately convenient",
+      "Very convenient",
+      "Extremely convenient"
+    ],
+    "polarity_reason": "Convenience is measured on a scale from not convenient to extremely convenient, which fits a unipolar scale."
+  },
+  {
+    "assertion": "Electric cars are better for urban air quality than petrol cars.",
+    "basic_concept": "evaluation",
+    "question_text": "To what extent do you think electric cars are better for urban air quality than petrol cars?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Much worse",
+      "Slightly worse",
+      "Neither worse nor better",
+      "Slightly better",
+      "Much better"
+    ],
+    "polarity_reason": "The evaluation of electric cars versus petrol cars for urban air quality can be seen positively or negatively, with a neutral midpoint, so a bipolar scale fits."
+  },
+  {
+    "assertion": "Cashless payments are safer than cash payments.",
+    "basic_concept": "preference",
+    "question_text": "How strongly do you prefer cashless payments over cash payments in terms of safety?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Strongly prefer cash",
+      "Somewhat prefer cash",
+      "No preference",
+      "Somewhat prefer cashless",
+      "Strongly prefer cashless"
+    ],
+    "polarity_reason": "A preference between two options has a negative pole (prefer cash) and positive pole (prefer cashless), so a bipolar scale fits."
+  },
+  {
+    "assertion": "Affordable housing is important to me.",
+    "basic_concept": "importance",
+    "question_text": "How important is affordable housing to you?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Not at all important",
+      "Slightly important",
+      "Moderately important",
+      "Very important",
+      "Extremely important"
+    ],
+    "polarity_reason": "Importance ranges from none to extreme along one direction, so a unipolar scale fits."
+  },
+  {
+    "assertion": "Reliable public transport is important for my daily life.",
+    "basic_concept": "importance",
+    "question_text": "How important is reliable public transport for your daily life?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Not at all important",
+      "Slightly important",
+      "Moderately important",
+      "Very important",
+      "Extremely important"
+    ],
+    "polarity_reason": "Importance ranges from none to extreme along one direction, so a unipolar scale fits."
+  },
+  {
+    "assertion": "Data privacy is important when I use mobile applications.",
+    "basic_concept": "importance",
+    "question_text": "How important is data privacy to you when you use mobile applications?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Not at all important",
+      "Slightly important",
+      "Moderately important",
+      "Very important",
+      "Extremely important"
+    ],
+    "polarity_reason": "Importance ranges from none to extreme along one direction, so a unipolar scale fits."
+  },
+  {
+    "assertion": "Environmental protection is an important value for me.",
+    "basic_concept": "importance",
+    "question_text": "How important is environmental protection as a value to you?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Not at all important",
+      "Slightly important",
+      "Moderately important",
+      "Very important",
+      "Extremely important"
+    ],
+    "polarity_reason": "Importance ranges from none to extreme along one direction, so a unipolar scale fits."
+  },
+  {
+    "assertion": "Public transport in my city is reliable.",
+    "basic_concept": "evaluation",
+    "question_text": "How reliable do you find the public transport in your city?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Very unreliable",
+      "Unreliable",
+      "Neither reliable nor unreliable",
+      "Reliable",
+      "Very reliable"
+    ],
+    "polarity_reason": "The reliability of public transport can be seen as having a negative pole (unreliable) and a positive pole (reliable), so a bipolar scale fits."
+  },
+  {
+    "assertion": "Online misinformation is a serious problem.",
+    "basic_concept": "evaluation",
+    "question_text": "To what extent do you think online misinformation is a serious problem?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Very much not a problem",
+      "Not much of a problem",
+      "Neither a problem nor not a problem",
+      "A serious problem",
+      "Very much a serious problem"
+    ],
+    "polarity_reason": "Evaluating the seriousness of an issue is inherently bipolar, as it can be seen as either a problem or not a problem."
+  },
+  {
+    "assertion": "Rent levels in my city are too high.",
+    "basic_concept": "evaluation",
+    "question_text": "How would you evaluate the current rent levels in your city?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Much too low",
+      "A bit too low",
+      "Just right",
+      "A bit too high",
+      "Much too high"
+    ],
+    "polarity_reason": "Evaluations of rent levels can be too low, just right, or too high, so a bipolar scale fits."
+  },
+  {
+    "assertion": "Housing costs in my city will increase next year.",
+    "basic_concept": "expectations_of_future_events",
+    "question_text": "How likely do you think it is that housing costs in your city will increase next year?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Not at all likely",
+      "Slightly likely",
+      "Moderately likely",
+      "Very likely",
+      "Extremely likely"
+    ],
+    "polarity_reason": "Expectations about future events have a clear zero point and increase in likelihood along one direction, so a unipolar scale fits."
+  },
+  {
+    "assertion": "I would complain to my landlord if essential repairs were delayed.",
+    "basic_concept": "action_tendencies",
+    "question_text": "How likely are you to complain to your landlord if essential repairs are delayed?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Not at all likely",
+      "Slightly likely",
+      "Moderately likely",
+      "Very likely",
+      "Extremely likely"
+    ],
+    "polarity_reason": "Action tendencies range from no likelihood to extreme likelihood, so a unipolar scale fits."
+  },
+  {
+    "assertion": "I would take the train rather than fly for a short domestic trip.",
+    "basic_concept": "preference",
+    "question_text": "How strongly do you prefer taking the train over flying for a short domestic trip?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Strongly prefer flying",
+      "Somewhat prefer flying",
+      "No preference",
+      "Somewhat prefer train",
+      "Strongly prefer train"
+    ],
+    "polarity_reason": "A preference between two options has a negative pole (prefer flying) and positive pole (prefer train), so a bipolar scale fits."
+  },
+  {
+    "assertion": "I exercise several times a week.",
+    "basic_concept": "behavior",
+    "question_text": "How often do you exercise in a week?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Never",
+      "Rarely",
+      "Sometimes",
+      "Often",
+      "Always"
+    ],
+    "polarity_reason": "Behavior, such as exercising, can be measured on a unipolar scale from never to always."
+  },
+  {
+    "assertion": "I sort my household waste before disposal.",
+    "basic_concept": "behavior",
+    "question_text": "How often do you sort your household waste before disposal?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Never",
+      "Rarely",
+      "Sometimes",
+      "Often",
+      "Always"
+    ],
+    "polarity_reason": "Sorting waste is a behavior that can occur with varying frequency along a single direction, so a unipolar scale fits."
+  },
+  {
+    "assertion": "Citizens should vote in national elections.",
+    "basic_concept": "norm",
+    "question_text": "To what extent do you support or oppose the view that citizens should vote in national elections?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Strongly oppose",
+      "Somewhat oppose",
+      "Neither support nor oppose",
+      "Somewhat support",
+      "Strongly support"
+    ],
+    "polarity_reason": "Norms about obligations have an explicit positive pole (strong support) and negative pole (strong opposition), so a bipolar scale fits."
+  },
+  {
+    "assertion": "People should sort household waste before disposal.",
+    "basic_concept": "norm",
+    "question_text": "To what extent do you support or oppose the view that people should sort household waste before disposal?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Strongly oppose",
+      "Somewhat oppose",
+      "Neither support nor oppose",
+      "Somewhat support",
+      "Strongly support"
+    ],
+    "polarity_reason": "Norms about obligations have an explicit positive pole (strong support) and negative pole (strong opposition), so a bipolar scale fits."
+  },
+  {
+    "assertion": "Parents should limit children's screen time on school nights.",
+    "basic_concept": "norm",
+    "question_text": "To what extent do you support or oppose the view that parents should limit children's screen time on school nights?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Strongly oppose",
+      "Somewhat oppose",
+      "Neither support nor oppose",
+      "Somewhat support",
+      "Strongly support"
+    ],
+    "polarity_reason": "Norms about parental responsibilities have an explicit positive pole (strong support) and negative pole (strong opposition), so a bipolar scale fits."
+  },
+  {
+    "assertion": "The government should increase funding for public libraries.",
+    "basic_concept": "norm",
+    "question_text": "To what extent do you support or oppose the view that the government should increase funding for public libraries?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Strongly oppose",
+      "Somewhat oppose",
+      "Neither support nor oppose",
+      "Somewhat support",
+      "Strongly support"
+    ],
+    "polarity_reason": "Norms about government funding have an explicit positive pole (strong support) and negative pole (strong opposition), so a bipolar scale fits."
+  },
+  {
+    "assertion": "Tenants have the right to receive written notice before rent increases.",
+    "basic_concept": "right",
+    "question_text": "To what extent do you agree or disagree that tenants have the right to receive written notice before rent increases?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Strongly disagree",
+      "Somewhat disagree",
+      "Neither agree nor disagree",
+      "Somewhat agree",
+      "Strongly agree"
+    ],
+    "polarity_reason": "Rights can be seen as having a positive or negative stance, so a bipolar scale fits to capture the range of opinions."
+  },
+  {
+    "assertion": "Employees have the right to disconnect from work emails outside working hours.",
+    "basic_concept": "right",
+    "question_text": "To what extent do you agree that employees have the right to disconnect from work emails outside working hours?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Strongly disagree",
+      "Somewhat disagree",
+      "Neither agree nor disagree",
+      "Somewhat agree",
+      "Strongly agree"
+    ],
+    "polarity_reason": "Rights can be seen as either strongly supported or strongly opposed, so a bipolar scale fits."
+  },
+  {
+    "assertion": "Students should have the right to access mental health counselling at university.",
+    "basic_concept": "right",
+    "question_text": "To what extent do you agree that students should have the right to access mental health counselling at university?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Strongly disagree",
+      "Somewhat disagree",
+      "Neither agree nor disagree",
+      "Somewhat agree",
+      "Strongly agree"
+    ],
+    "polarity_reason": "Rights can be seen as inherently bipolar, with opinions ranging from strong disagreement to strong agreement."
+  },
+  {
+    "assertion": "I have used recreational drugs in the past year.",
+    "basic_concept": "events",
+    "question_text": "Have you used recreational drugs in the past year?",
+    "format_type": "direct_interrogative",
+    "scale_type": "nominal",
+    "n_points": 2,
+    "labels": [
+      "No",
+      "Yes"
+    ],
+    "polarity_reason": "The use of recreational drugs is an objective event that can be answered with a yes or no."
+  },
+  {
+    "assertion": "Immigrants should adapt to the local culture of their new country.",
+    "basic_concept": "norm",
+    "question_text": "To what extent do you support or oppose the view that immigrants should adapt to the local culture of their new country?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Strongly oppose",
+      "Somewhat oppose",
+      "Neither support nor oppose",
+      "Somewhat support",
+      "Strongly support"
+    ],
+    "polarity_reason": "Norms about cultural adaptation have an explicit positive pole (strong support) and negative pole (strong opposition), so a bipolar scale fits."
+  },
+  {
+    "assertion": "Equality between all people is one of my core values.",
+    "basic_concept": "values",
+    "question_text": "How strongly do you value equality between all people?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Not at all important",
+      "Somewhat important",
+      "Moderately important",
+      "Very important",
+      "Extremely important"
+    ],
+    "polarity_reason": "Values range from not important at all to extremely important along one direction, so a unipolar scale fits."
+  },
+  {
+    "assertion": "Loyalty to my family is a guiding value in my life.",
+    "basic_concept": "values",
+    "question_text": "How important is loyalty to your family as a guiding value in your life?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Not at all important",
+      "Slightly important",
+      "Moderately important",
+      "Very important",
+      "Extremely important"
+    ],
+    "polarity_reason": "Values range from not at all important to extremely important, so a unipolar scale fits."
+  },
+  {
+    "assertion": "Religious faith is an important value in my life.",
+    "basic_concept": "importance",
+    "question_text": "How important is religious faith in your life?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Not at all important",
+      "Slightly important",
+      "Moderately important",
+      "Very important",
+      "Extremely important"
+    ],
+    "polarity_reason": "Importance ranges from none to extreme along one direction, so a unipolar scale fits."
+  },
+  {
+    "assertion": "Spending a lot of time on social media increases feelings of loneliness.",
+    "basic_concept": "causal_relationship",
+    "question_text": "To what extent do you think spending a lot of time on social media increases feelings of loneliness?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Strongly disagrees",
+      "Somewhat disagrees",
+      "Neither agrees nor disagrees",
+      "Somewhat agrees",
+      "Strongly agrees"
+    ],
+    "polarity_reason": "A causal claim can be strongly disputed or strongly endorsed, so a bipolar scale captures the full range of opinion."
+  },
+  {
+    "assertion": "Regular physical exercise improves mental well-being.",
+    "basic_concept": "causal_relationship",
+    "question_text": "To what extent do you think regular physical exercise improves mental well-being?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Strongly disagrees with this",
+      "Somewhat disagrees",
+      "Neither agrees nor disagrees",
+      "Somewhat agrees",
+      "Strongly agrees with this"
+    ],
+    "polarity_reason": "A causal claim can be strongly disputed or strongly endorsed, so a bipolar scale captures the full range of opinion."
+  },
+  {
+    "assertion": "Higher fuel prices reduce how much people use their cars.",
+    "basic_concept": "causal_relationship",
+    "question_text": "To what extent do you think higher fuel prices reduce how much people use their cars?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Strongly disagrees with this",
+      "Somewhat disagrees",
+      "Neither agrees nor disagrees",
+      "Somewhat agrees",
+      "Strongly agrees with this"
+    ],
+    "polarity_reason": "A causal claim can be strongly disputed or strongly endorsed, so a bipolar scale captures the full range of opinion."
+  },
+  {
+    "assertion": "My political views are similar to those of my close friends.",
+    "basic_concept": "similarity_relationship",
+    "question_text": "How similar are your political views to those of your close friends?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Not at all similar",
+      "Somewhat similar",
+      "Moderately similar",
+      "Very similar",
+      "Completely similar"
+    ],
+    "polarity_reason": "Similarity is an intensity that ranges from no similarity to complete similarity, fitting a unipolar scale."
+  },
+  {
+    "assertion": "My spending habits are similar to those of my parents.",
+    "basic_concept": "similarity_relationship",
+    "question_text": "How similar are your spending habits to those of your parents?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Not at all similar",
+      "Slightly similar",
+      "Moderately similar",
+      "Very similar",
+      "Completely similar"
+    ],
+    "polarity_reason": "Similarity ranges from no similarity to complete similarity along one direction, so a unipolar scale fits."
+  },
+  {
+    "assertion": "My taste in music is similar to my partner's.",
+    "basic_concept": "similarity_relationship",
+    "question_text": "How similar is your taste in music to your partner's?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Not at all similar",
+      "Slightly similar",
+      "Moderately similar",
+      "Very similar",
+      "Completely similar"
+    ],
+    "polarity_reason": "Similarity in taste ranges from no similarity to complete similarity, so a unipolar scale fits."
+  },
+  {
+    "assertion": "I prefer working from home rather than working in an office.",
+    "basic_concept": "preference",
+    "question_text": "How strongly do you prefer working from home over working in an office?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Strongly prefer office",
+      "Somewhat prefer office",
+      "No preference",
+      "Somewhat prefer home",
+      "Strongly prefer home"
+    ],
+    "polarity_reason": "A preference between two options has a negative pole (prefer office) and positive pole (prefer home), so a bipolar scale fits."
+  },
+  {
+    "assertion": "I prefer reading printed books rather than e-books.",
+    "basic_concept": "preference",
+    "question_text": "How strongly do you prefer reading printed books over e-books?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Strongly prefer e-books",
+      "Somewhat prefer e-books",
+      "No preference",
+      "Somewhat prefer printed books",
+      "Strongly prefer printed books"
+    ],
+    "polarity_reason": "A preference between two options has a negative pole (prefer e-books) and positive pole (prefer printed books), so a bipolar scale fits."
+  },
+  {
+    "assertion": "I prefer using public transport rather than driving for my daily commute.",
+    "basic_concept": "preference",
+    "question_text": "How strongly do you prefer using public transport over driving for your daily commute?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Strongly prefer driving",
+      "Somewhat prefer driving",
+      "No preference",
+      "Somewhat prefer public transport",
+      "Strongly prefer public transport"
+    ],
+    "polarity_reason": "A preference between two options has a negative pole (prefer driving) and positive pole (prefer public transport), so a bipolar scale fits."
+  },
+  {
+    "assertion": "The government should introduce a nationwide four-day working week.",
+    "basic_concept": "norm",
+    "question_text": "To what extent do you support or oppose the government introducing a nationwide four-day working week?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Strongly oppose",
+      "Somewhat oppose",
+      "Neither support nor oppose",
+      "Somewhat support",
+      "Strongly support"
+    ],
+    "polarity_reason": "Norms about policy changes have an explicit positive pole (strong support) and negative pole (strong opposition), so a bipolar scale fits."
+  },
+  {
+    "assertion": "The city should ban private cars from the city centre.",
+    "basic_concept": "norm",
+    "question_text": "To what extent do you support or oppose the view that the city should ban private cars from the city centre?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Strongly oppose",
+      "Somewhat oppose",
+      "Neither support nor oppose",
+      "Somewhat support",
+      "Strongly support"
+    ],
+    "polarity_reason": "Norms about regulations have an explicit positive pole (strong support) and negative pole (strong opposition), so a bipolar scale fits."
+  },
+  {
+    "assertion": "The government should abolish university tuition fees.",
+    "basic_concept": "norm",
+    "question_text": "To what extent do you support or oppose the view that the government should abolish university tuition fees?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Strongly oppose",
+      "Somewhat oppose",
+      "Neither support nor oppose",
+      "Somewhat support",
+      "Strongly support"
+    ],
+    "polarity_reason": "Norms about government actions have an explicit positive pole (strong support) and negative pole (strong opposition), so a bipolar scale fits."
+  },
+  {
+    "assertion": "I intend to reduce my meat consumption over the next year.",
+    "basic_concept": "expectations_of_future_events",
+    "question_text": "How likely are you to reduce your meat consumption over the next year?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Not at all likely",
+      "Slightly likely",
+      "Moderately likely",
+      "Very likely",
+      "Completely certain"
+    ],
+    "polarity_reason": "Expectations about future events have a clear zero point and increase in likelihood along one direction, so a unipolar scale fits."
+  },
+  {
+    "assertion": "I plan to switch to a renewable energy provider.",
+    "basic_concept": "expectations_of_future_events",
+    "question_text": "How likely are you to switch to a renewable energy provider in the future?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Not at all likely",
+      "Slightly likely",
+      "Moderately likely",
+      "Very likely",
+      "Completely likely"
+    ],
+    "polarity_reason": "Expectations about future events range from not at all likely to completely likely, so a unipolar scale fits."
+  },
+  {
+    "assertion": "I intend to take part in the next local election.",
+    "basic_concept": "expectations_of_future_events",
+    "question_text": "How likely are you to take part in the next local election?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Not at all likely",
+      "Slightly likely",
+      "Moderately likely",
+      "Very likely",
+      "Completely certain"
+    ],
+    "polarity_reason": "Expectations of future events have a clear zero point and increase in likelihood along one direction, so a unipolar scale fits."
+  },
+  {
+    "assertion": "I expect to find a better job within the next two years.",
+    "basic_concept": "expectations_of_future_events",
+    "question_text": "How likely do you think it is that you will find a better job within the next two years?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Very unlikely",
+      "Somewhat unlikely",
+      "Neutral",
+      "Somewhat likely",
+      "Very likely"
+    ],
+    "polarity_reason": "Expectations of future events are measured on a unipolar scale from unlikely to likely."
+  },
+  {
+    "assertion": "I expect to travel abroad within the next year.",
+    "basic_concept": "expectations_of_future_events",
+    "question_text": "How likely is it that you will travel abroad within the next year?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Not at all likely",
+      "Slightly likely",
+      "Moderately likely",
+      "Very likely",
+      "Extremely likely"
+    ],
+    "polarity_reason": "Expectations of future events have a clear zero point and increase in likelihood along one direction, so a unipolar scale fits."
+  },
+  {
+    "assertion": "I expect renewable energy to become my country's main power source within twenty years.",
+    "basic_concept": "expectations_of_future_events",
+    "question_text": "How likely do you think it is that renewable energy will become your country's main power source within twenty years?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Not at all likely",
+      "Slightly likely",
+      "Moderately likely",
+      "Very likely",
+      "Extremely likely"
+    ],
+    "polarity_reason": "Expectations of future events are measured on a unipolar scale from zero likelihood to extreme likelihood."
+  },
+  {
+    "assertion": "Artificial intelligence is beneficial for society.",
+    "basic_concept": "evaluation",
+    "question_text": "To what extent do you think artificial intelligence is beneficial for society?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Very harmful",
+      "Harmful",
+      "Neither harmful nor beneficial",
+      "Beneficial",
+      "Very beneficial"
+    ],
+    "polarity_reason": "Evaluations about the impact of artificial intelligence on society can be negative, neutral, or positive, so a bipolar scale fits."
+  },
+  {
+    "assertion": "Genetically modified food is harmful to health.",
+    "basic_concept": "evaluation",
+    "question_text": "How would you rate the statement that genetically modified food is harmful to health?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Strongly disagree",
+      "Disagree",
+      "Neither agree nor disagree",
+      "Agree",
+      "Strongly agree"
+    ],
+    "polarity_reason": "Evaluations about harm have an explicit negative pole (disagreement) and positive pole (agreement), so a bipolar scale fits."
+  },
+  {
+    "assertion": "Immigration is good for the national economy.",
+    "basic_concept": "evaluation",
+    "question_text": "How would you rate the statement that immigration is good for the national economy?",
+    "format_type": "direct_interrogative",
+    "scale_type": "bipolar",
+    "n_points": 5,
+    "labels": [
+      "Very bad",
+      "Bad",
+      "Neither good nor bad",
+      "Good",
+      "Very good"
+    ],
+    "polarity_reason": "Good/bad evaluations are inherently bipolar with a clear neutral midpoint."
+  },
+  {
+    "assertion": "I have moved to a different city in the past two years.",
+    "basic_concept": "events",
+    "question_text": "Have you moved to a different city in the past two years?",
+    "format_type": "direct_interrogative",
+    "scale_type": "nominal",
+    "n_points": 2,
+    "labels": [
+      "No",
+      "Yes"
+    ],
+    "polarity_reason": "Moving to a different city is an objective event, so a nominal two-option item fits."
+  },
+  {
+    "assertion": "I have changed my job in the last twelve months.",
+    "basic_concept": "events",
+    "question_text": "Have you changed your job in the last twelve months?",
+    "format_type": "direct_interrogative",
+    "scale_type": "nominal",
+    "n_points": 2,
+    "labels": [
+      "No",
+      "Yes"
+    ],
+    "polarity_reason": "Changing a job is an objective event, so a nominal two-option item fits."
+  },
+  {
+    "assertion": "I have voted in a national election before.",
+    "basic_concept": "events",
+    "question_text": "Have you voted in a national election before?",
+    "format_type": "direct_interrogative",
+    "scale_type": "nominal",
+    "n_points": 2,
+    "labels": [
+      "No",
+      "Yes"
+    ],
+    "polarity_reason": "Voting in a national election is an objective event, so a nominal two-option item fits."
+  },
+  {
+    "assertion": "I am currently in full-time employment.",
+    "basic_concept": "events",
+    "question_text": "Are you currently in full-time employment?",
+    "format_type": "direct_interrogative",
+    "scale_type": "nominal",
+    "n_points": 2,
+    "labels": [
+      "No",
+      "Yes"
+    ],
+    "polarity_reason": "Current employment status is an objective yes/no fact, so a nominal two-option item fits."
+  },
+  {
+    "assertion": "I live in a household with more than two people.",
+    "basic_concept": "demographics",
+    "question_text": "Do you live in a household with more than two people?",
+    "format_type": "direct_interrogative",
+    "scale_type": "nominal",
+    "n_points": 2,
+    "labels": [
+      "No",
+      "Yes"
+    ],
+    "polarity_reason": "Living in a household with more than two people is an objective fact, so a nominal two-option item fits."
+  },
+  {
+    "assertion": "I have completed a university degree.",
+    "basic_concept": "demographics",
+    "question_text": "Have you completed a university degree?",
+    "format_type": "direct_interrogative",
+    "scale_type": "nominal",
+    "n_points": 2,
+    "labels": [
+      "No",
+      "Yes"
+    ],
+    "polarity_reason": "Holding a degree is an objective yes/no fact, so a nominal two-option item fits."
+  },
+  {
+    "assertion": "The European Union currently has 27 member states.",
+    "basic_concept": "knowledge",
+    "question_text": "Is the following statement true or false: The European Union currently has 27 member states?",
+    "format_type": "direct_interrogative",
+    "scale_type": "nominal",
+    "n_points": 2,
+    "labels": [
+      "False",
+      "True"
+    ],
+    "polarity_reason": "The factual accuracy of the statement is an objective yes/no fact, so a nominal two-option item fits."
+  },
+  {
+    "assertion": "Carbon dioxide is a greenhouse gas.",
+    "basic_concept": "knowledge",
+    "question_text": "Is carbon dioxide a greenhouse gas?",
+    "format_type": "direct_interrogative",
+    "scale_type": "nominal",
+    "n_points": 2,
+    "labels": [
+      "No",
+      "Yes"
+    ],
+    "polarity_reason": "The statement is an objective fact, so a nominal yes/no item fits."
+  },
+  {
+    "assertion": "The German federal parliament is called the Bundestag.",
+    "basic_concept": "knowledge",
+    "question_text": "Is the German federal parliament called the Bundestag?",
+    "format_type": "direct_interrogative",
+    "scale_type": "nominal",
+    "n_points": 2,
+    "labels": [
+      "No",
+      "Yes"
+    ],
+    "polarity_reason": "This is an objective fact about the naming of a governmental institution, so a nominal yes/no item fits."
+  },
+  {
+    "assertion": "I usually go to bed before midnight on workdays.",
+    "basic_concept": "behavior",
+    "question_text": "How often do you go to bed before midnight on workdays?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Never",
+      "Rarely",
+      "Sometimes",
+      "Often",
+      "Always"
+    ],
+    "polarity_reason": "Frequency of a behavior can be measured on a unipolar scale from never to always."
+  },
+  {
+    "assertion": "My working day usually starts before 9 a.m.",
+    "basic_concept": "time",
+    "question_text": "Does your working day usually start before 9 a.m.?",
+    "format_type": "direct_interrogative",
+    "scale_type": "nominal",
+    "n_points": 2,
+    "labels": [
+      "No",
+      "Yes"
+    ],
+    "polarity_reason": "The starting time of a working day is an objective fact, so a nominal two-option item fits."
+  },
+  {
+    "assertion": "I moved to my current city after 2015.",
+    "basic_concept": "events",
+    "question_text": "Did you move to your current city after 2015?",
+    "format_type": "direct_interrogative",
+    "scale_type": "nominal",
+    "n_points": 2,
+    "labels": [
+      "No",
+      "Yes"
+    ],
+    "polarity_reason": "Moving to a city after a specific year is an objective event that can be answered with a yes or no."
+  },
+  {
+    "assertion": "I live within walking distance of a supermarket.",
+    "basic_concept": "place",
+    "question_text": "Do you live within walking distance of a supermarket?",
+    "format_type": "direct_interrogative",
+    "scale_type": "nominal",
+    "n_points": 2,
+    "labels": [
+      "No",
+      "Yes"
+    ],
+    "polarity_reason": "Living within walking distance of a supermarket is an objective yes/no fact, so a nominal two-option item fits."
+  },
+  {
+    "assertion": "I work in the city centre.",
+    "basic_concept": "place",
+    "question_text": "Where do you work?",
+    "format_type": "direct_interrogative",
+    "scale_type": "nominal",
+    "n_points": 4,
+    "labels": [
+      "Rural area",
+      "Small town",
+      "City centre",
+      "Other urban area"
+    ],
+    "polarity_reason": "Work location is an objective category with no inherent order, so a nominal item fits."
+  },
+  {
+    "assertion": "I grew up in a rural area.",
+    "basic_concept": "place",
+    "question_text": "In what type of area did you grow up?",
+    "format_type": "direct_interrogative",
+    "scale_type": "nominal",
+    "n_points": 4,
+    "labels": [
+      "Rural area",
+      "Small town",
+      "Suburb",
+      "Large city"
+    ],
+    "polarity_reason": "Type of area is an objective category with no inherent order, so a nominal item fits."
+  },
+  {
+    "assertion": "I read more than ten books in a typical year.",
+    "basic_concept": "events",
+    "question_text": "Have you read more than ten books in a typical year?",
+    "format_type": "direct_interrogative",
+    "scale_type": "nominal",
+    "n_points": 2,
+    "labels": [
+      "No",
+      "Yes"
+    ],
+    "polarity_reason": "Reading more than ten books in a year is an objective event, so a nominal two-option item fits."
+  },
+  {
+    "assertion": "I spend more than fifty euros on groceries in a typical week.",
+    "basic_concept": "quantities",
+    "question_text": "How much do you spend on groceries in a typical week?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Less than 25 euros",
+      "25-50 euros",
+      "50-75 euros",
+      "75-100 euros",
+      "More than 100 euros"
+    ],
+    "polarity_reason": "Amount spent on groceries can be measured along a single direction from less to more, so a unipolar scale fits."
+  },
+  {
+    "assertion": "I drink at least two litres of water per day.",
+    "basic_concept": "events",
+    "question_text": "Do you drink at least two litres of water per day?",
+    "format_type": "direct_interrogative",
+    "scale_type": "nominal",
+    "n_points": 2,
+    "labels": [
+      "No",
+      "Yes"
+    ],
+    "polarity_reason": "Whether or not someone drinks at least two litres of water per day is an objective event, so a nominal two-option item fits."
+  },
+  {
+    "assertion": "I follow the same routine every morning before work.",
+    "basic_concept": "behavior",
+    "question_text": "How consistently do you follow the same routine every morning before work?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Not at all consistently",
+      "Slightly consistently",
+      "Moderately consistently",
+      "Very consistently",
+      "Completely consistently"
+    ],
+    "polarity_reason": "Consistency in behavior ranges from not at all to completely, so a unipolar scale fits."
+  },
+  {
+    "assertion": "I always compare prices online before making a large purchase.",
+    "basic_concept": "behavior",
+    "question_text": "How often do you compare prices online before making a large purchase?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Never",
+      "Rarely",
+      "Sometimes",
+      "Often",
+      "Always"
+    ],
+    "polarity_reason": "Behavior regarding price comparison can range from never to always, fitting a unipolar scale."
+  },
+  {
+    "assertion": "I renew my official documents online rather than in person.",
+    "basic_concept": "behavior",
+    "question_text": "How often do you renew your official documents online rather than in person?",
+    "format_type": "direct_interrogative",
+    "scale_type": "unipolar",
+    "n_points": 5,
+    "labels": [
+      "Never",
+      "Rarely",
+      "Sometimes",
+      "Often",
+      "Always"
+    ],
+    "polarity_reason": "Behavior can be measured on an intensity scale from never to always, so a unipolar scale fits."
+  }
+]
