@@ -37,6 +37,10 @@ def main():
         "--limit", type=int, default=None,
         help="Only process the first N assertions (handy for quick local tests).",
     )
+    parser.add_argument(
+        "--runs", type=int, default=1,
+        help="Number of times to run generation per assertion.",
+    )
     args = parser.parse_args()
 
     # Resolve model name and output stem
@@ -60,7 +64,7 @@ def main():
     print(f"Output: outputs/items_{stem}.json")
     print()
 
-    run_all(model_name, args.assertions, args.out, stem=stem, limit=args.limit)
+    run_all(model_name, args.assertions, args.out, stem=stem, limit=args.limit, runs=args.runs)
 
 
 if __name__ == "__main__":
